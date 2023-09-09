@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<style>
+    p {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Login
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email" name="username" required>
+                            <p id="min"></p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="pass" name="password" required>
+                            <p id="demo"></p>
+                        </div>
+                        <button onclick="btn()" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function btn() {
+            let password = document.getElementById('pass').value
+            let email = document.getElementById('email').value
+            console.warn('email----------------------' + email);
+            console.warn('pass----------------------' + password);
+            if (password == '') {
+                document.getElementById('demo').innerHTML = 'Please Fill This File'
+            }
+            if (email == '') {
+                document.getElementById('min').innerHTML = 'Please Fill This File'
+            }
+            let registerUser = [];
+            let username = '';
+            if (!localStorage.getItem('registeredUser')) {
+                resisterUser = [];
+            } else {
+                registerUser = JSON.parse(localStorage.getItem('registeredUser'));
+            }
+            let exists = 0;
+            for (let i = 0; i < registerUser.length; i++) {
+                if (registerUser[i].email === email && registerUser[i].pass === password) {
+                    console.warn('trueeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee');
+                    username = registerUser[i].userName;
+                    exists = 1;
+                }
+            }
+            if (exists === 1) {
+                let user = {
+                    name: username,
+                    email: email,
+                    password: password
+                }
+                localStorage.setItem('loginuser', JSON.stringify(user))
+                window.location.href = 'index.html';
+            }
+            else {
+                alert('Invalid credential')
+            }
+        }
+    </script>
+</body>
+
+</html>

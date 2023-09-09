@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid mt-5 ">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <a href="added.html">
+                        <i class="fa fa-shopping-cart pe-3 fs-4 text-success" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <img class="mx-auto d-block" src="Assets/img/logo_png (1).webp" style="width: 49.5%;" alt="">
+                </div>
+                <div class="col-md-4  text-end">
+                    <div class="dropdown pe-3">
+                        <button class="btn btn-danger me-3 dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            US
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">AF</a></li>
+                            <li><a class="dropdown-item" href="#">AX</a></li>
+                            <li><a class="dropdown-item" href="#">AL</a></li>
+                        </ul>
+                        <a href="login.html"><i class="fa fa-user fs-4 pe-3 cursor-pointer text-success"
+                                aria-hidden="true"></i></a>
+                        <i class="fa fa-search fs-4 pe-3 text-success" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-danger text-light align-items-center mt-4 p-4 ">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto d-block d-flex text-light">
+                            <li class="nav-item">
+                                <a class="nav-link active pe-5 text-light" aria-current="page"
+                                    href="../Home.htm">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active pe-5 text-light" href="../Books.htm">BOOKS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active pe-5 text-light" href="../About.htm" tabindex="-1"
+                                    aria-disabled="true">About US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active pe-5 text-light" href="../Contact.htm">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container w-75">
+            <div class="row mt-5">
+                <div class="col-lg-6 mt-5">
+                    <img class="mt-5" src="../Assets/Booksimg/9.webp" alt=""> <br>
+                    <img class="mx-3 mt-5" src="../Assets/img/1.png" width="100" alt="">
+                    <img class="mx-3 mt-5" src="../Assets/img/2.png" width="100" alt="">
+                    <img class="mx-3 mt-5" src="../Assets/img/3.png" width="100" alt="">
+                </div>
+                <div class="col-lg-6 mt-5">
+                    <h2 class="mt-5"> Home Made Meals
+                    </h2>
+                    <h3>$26</h3>
+                    <h3>ALICE JAMES</h3>
+                    <p>Availability: In Stock</p>
+                    <p class="mt-5">Landed gentry cesar romero by jingo. Nostrilis tickler albert einstein, super mario
+                        id educated cesar romero tip top old bean landed gentry don’t panic by jingo. Nostrilis tickler
+                        albert einstein...</p>
+                    <form action="/action_page.php" class="d-flex mt-5">
+                        <p class="fw-bolder">Quantity :</p>
+                        <input type="number" id="points" name="points" onchange="multiply()" step="" value="1" min="1"
+                            placeholder="ADD MORE" class="p-0 w-25 mb-2 ms-2">
+                    </form>
+                    <h3>Total:$ <span id="total"></span></h3>
+                    <button class="border p-2 none w-25 btn-danger rounded mx-3 mt-2" onclick="addToCart()">Add To Card
+                    </button>
+                    </p>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-4 mt-5">
+                        <h2>DESCRIPTION</h2>
+                    </div>
+                    <div class="col-lg-4 mt-5">
+                        <h2>REVIEWS</h2>
+                    </div>
+                    <div class="col-lg-4 mt-5">
+                        <h2>CUSTOM TAB</h2>
+                    </div>
+                    <hr class="mt-5">
+                    <p class="mt-5">Landed gentry cesar romero by jingo. Nostrilis tickler albert einstein, super mario
+                        id educated cesar romero tip top old bean landed gentry don’t panic by jingo. Nostrilis tickler
+                        albert einstein dali, albert einstein tip top old bean
+                        tom selleck Nostrilis tickler id by jingo. don’t panic prostate cancer Sergeant major dali
+                        landed gentry hair trimmer cesar romero super mario educated? Super mario top gun freestyle,
+                        freestyle che guevara jolly good show bogie basket
+                        super mario top gun face mop, Droopy top gun che guevara Fallen eyebrow jolly good show
+                        freestyle testosterone trophy Sergeant major face mop bogie basket dickie davies elit super
+                        mario. Movember Nostrilis tickler magnum pi louis xiii
+                        professor plum graeme souness sweat irrigator,, ding-dong louis xiii socially mobile louis xiii
+                        movember graeme souness magnum pi sweat irrigator, Nostrilis tickler professor plum theodore
+                        roosevelt andrew weatherall. Circus strongman
+                        mark lawrenson admiral, dick dastardly admiral circus strongman stiff upper lip fu manchu hairy
+                        kiss. Nostrilis tickler mark lawrenson, circus strongman admiral Nostrilis tickler saddam
+                        hussein mark lawrenson sweat irrigator, cigars
+                        hairy kiss. stiff upper lip burt reynolds fu manchu dick dastardly.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <h2 class=" mt-5 text-center"> RELATED PRODUCTS</h2>
+            <hr class="mt-5 mb-5">
+            <div class="col-lg-3 text-center">
+                <img src="../Assets/img/Screenshot 2023-05-03 102147.png" width="250" alt="">
+                <h4 class="text-success">$11.99 <del>$19.99</h4></del>
+                <button class="border none rounded btn-danger">50%</button>
+            </div>
+            <div class="col-lg-3 text-center">
+                <img src="../Assets/img/Screenshot 2023-05-03 102328.png" width="250" alt="">
+                <h4 class="text-success">$11.99 <del>$19.99</h4></del>
+                <button class="border none rounded btn-danger">50%</button>
+            </div>
+            <div class="col-lg-3 text-center">
+                <img src="../Assets/img/Screenshot 2023-05-03 102430.png" width="250" alt="">
+                <h4 class="text-success">$11.99 <del>$19.99</h4></del>
+                <button class="border none rounded btn-danger">50%</button>
+            </div>
+            <div class="col-lg-3 text-center">
+                <img src="../Assets/img/Screenshot 2023-05-03 102510.png" width="250" alt="">
+                <h4 class="text-success">$11.99 <del>$19.99 </h4></del>
+                <button class="border none rounded btn-danger">50%</button>
+            </div>
+        </div>
+        <footer class="mt-5 bg-dark text-white">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h1>BOOK SHOP</h1>
+                        <p class="mt-4">1203 Town Center</p>
+                        <p>+0000 123 456 789</p>
+                        <p>info@example.com</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h1>Help</h1>
+                        <p class="mt-4">Search</p>
+                        <p>Help</p>
+                        <p>information</p>
+                        <p>Privacy Policy</p>
+                        <p>Shipping Information</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h1 class="text-">Support</h1>
+                        <p class="mt-4">Search Terms</p>
+                        <p>dvanced Search</p>
+                        <p>Helps & Faqs</p>
+                        <p>Store & Location</p>
+                        <p>Orders & Returns</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h1>Information</h1>
+                        <p class="mt-4">Contact</p>
+                        <p>About</p>
+                        <p>Carrers</p>
+                        <p>Refund & Returns</p>
+                        <p>Deliveries</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12 mt-5 d-flex justify-content-center">
+                        <i class="fa fa-twitter " aria-hidden="true"></i>
+                        <i class="fa fa-facebook-official ms-5" aria-hidden="true"></i>
+                        <i class="fa fa-pinterest-p ms-5" aria-hidden="true"></i>
+                        <i class="fa fa-instagram ms-5" aria-hidden="true"></i>
+                        <i class="fa fa-tumblr ms-5" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color:22px white;" class="mb-5">
+            <div class="container">
+                <div class="row  d-flex ">
+                    <div class="col-md-6">
+                        <p>All Right Reserverd © 2023, Bookly-theme</p>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <i class="fa fa-cc-visa text-info" aria-hidden="true"></i>
+                        <i class="fa fa-cc-mastercard text-danger ms-2" aria-hidden="true"></i>
+                        <i class="fa fa-cc-amex text-info ms-2" aria-hidden="true"></i>
+                        <i class="fa fa-paypal text-info ms-2" aria-hidden="true"></i>
+                        <i class="fa fa-cc-discover text-danger ms-2" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script>
+            let addCard = {
+                id: 19,
+                img: 'Assets/Booksimg/9.webp',
+                name: 'ALICE JAMES',
+                description: 'Home Made Meals',
+                price: 26,
+            }
+            function addToCart() {
+                cardData = addCard
+                console.log(cardData)
+                checkCard = JSON.parse(localStorage.getItem('cartItems'))
+                if (checkCard === null) {
+                    checkCard = []
+                } if (checkCard.find(checkCard => checkCard.id == cardData.id)) {
+                    alert('this card is already exist')
+                } else {
+                    checkCard.push(cardData)
+                    localStorage.setItem('cartItems', JSON.stringify(checkCard))
+                }
+            }
+            function multiply() {
+                cardData = addCard
+                qty = Number(document.getElementById('points').value);
+                getPrice = addCard.price
+                multiplied = qty * getPrice
+                console.log(multiplied)
+                cardData.quantity = qty;
+                document.getElementById('total').innerHTML = multiplied
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(purple, orange);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    
+    }
+</style>
+<body>
+
+    <div class="container mt-5 "  >
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="mb-4 text-white">Registration Form</h2>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    <p class="text-danger" id="emailErr"></p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
+                    <p class="text-danger" id="cnfPassErr"></p>
+                </div>
+                <button style="background-image: linear-gradient(purple, orange);" onclick="register()" type="submit"  class="btn btn-primary border-0">Register</button>
+                <button style="background-image: linear-gradient(purple, orange);" onclick="oldAccount()" type="submit"  class="btn btn-primary border-0 ms-5">Already have Account</button>
+                
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function register() {
+            let userName = document.getElementById('username');
+            let email = document.getElementById('email');
+            let pass = document.getElementById('password');
+            let confirmPass = document.getElementById('confirmPassword');
+            if (!userName.value) {
+                userName.setAttribute('class', 'form-control border border-danger');
+                return;
+            } else {
+                userName.setAttribute('class', 'form-control')
+            }
+            if (!email.value) {
+                email.setAttribute('class', 'form-control border border-danger')
+                return;
+
+            } else {
+                email.setAttribute('class', 'form-control')
+            }
+            if (!pass.value) {
+                pass.setAttribute('class', 'form-control border border-danger')
+                return;
+
+            } else {
+                pass.setAttribute('class', 'form-control')
+            }
+            if (!confirmPass.value) {
+                confirmPass.setAttribute('class', 'form-control border border-danger')
+                return;
+
+            } else {    
+                confirmPass.setAttribute('class', 'form-control')
+            }
+            if (confirmPass.value !== pass.value) {
+                document.getElementById('cnfPassErr').innerHTML = 'Confirm password does not matched width password'
+                confirmPass.setAttribute('class', 'form-control border border-danger')
+                return;
+
+            } else {
+                        window.location.href = 'login-form.html';
+
+                document.getElementById('cnfPassErr').innerHTML = ''
+                confirmPass.setAttribute('class', 'form-control')
+            }
+            let registerUser = [];
+            if (!localStorage.getItem('registeredUser')) {
+                resisterUser = [];
+            } else {
+                registerUser = JSON.parse(localStorage.getItem('registeredUser'));
+            }
+            let exists = 0;
+            for (let i = 0; i < registerUser.length; i++) {
+                if (registerUser[i].email === email.value) {
+                    exists = 1;
+                }
+            }
+            if (exists === 0) {
+                document.getElementById('emailErr').innerHTML = ''
+                registerUser.push({
+                    userName: userName.value,
+                    email: email.value,
+                    pass: pass.value,
+                })
+                localStorage.setItem('registeredUser', JSON.stringify(registerUser))
+            } else {
+                email.setAttribute('class', 'form-control border border-danger')
+                document.getElementById('emailErr').innerHTML = 'Email is already exist'
+            }
+            window.location.href = 'login.html';
+        };
+       function oldAccount(){
+        window.location.href = 'login.html';
+        }
+        
+    </script>
+</body>
+</html>
